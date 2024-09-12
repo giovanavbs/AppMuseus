@@ -1,0 +1,14 @@
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/logo.png
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/assets/images/perfil.png
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/packages/iconsax/lib/assets/fonts/iconsax.ttf
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/packages/line_awesome_flutter/lib/fonts/LineAwesome.ttf
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

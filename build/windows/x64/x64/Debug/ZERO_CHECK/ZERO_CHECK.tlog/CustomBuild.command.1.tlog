@@ -1,0 +1,10 @@
+^C:\USERS\GIOVA\DESKTOP\FLUTTERAPP\BUILD\WINDOWS\X64\CMAKEFILES\24C1D494444803FEDB190A6D078E81FB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/giova/Desktop/flutterapp/windows -BC:/Users/giova/Desktop/flutterapp/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/giova/Desktop/flutterapp/build/windows/x64/museu_gigi.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
