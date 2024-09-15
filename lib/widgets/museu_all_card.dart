@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:url_launcher/url_launcher.dart';  
 import 'package:museus/models/museus.dart';
 import 'package:museus/telas/detalhes_museu.dart';
 
@@ -7,13 +8,20 @@ class MuseuCard extends StatelessWidget {
   final Museu museu;
   MuseuCard({super.key, required this.museu});
 
+  Future<void> _launchURL() async {
+    final Uri url = Uri.parse('https://www.google.com/maps/search/?api=1&query=${museu.latitude},${museu.longitude}');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => DetalhesScreen(museu: museu,)
+          builder: (context) => DetalhesScreen(museu: museu,),
         ),
       ),
       child: Stack(
@@ -62,13 +70,13 @@ class MuseuCard extends StatelessWidget {
             top: 1,
             right: 1,
             child: IconButton(
-              onPressed: () {},
+              onPressed: _launchURL,
               style: IconButton.styleFrom(
                 backgroundColor: Colors.white,
                 fixedSize: const Size(30, 30),
               ),
               iconSize: 20,
-              icon: const Icon(Iconsax.heart),
+              icon: const Icon(Iconsax.location),
             ),
           )
         ],

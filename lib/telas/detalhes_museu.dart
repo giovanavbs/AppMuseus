@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:museus/models/museus.dart';
+import 'package:museus/models/expo.dart';
 import 'package:museus/widgets/constantes.dart';
-
+import 'package:museus/telas/expo-list-screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetalhesScreen extends StatefulWidget {
   final Museu museu;
@@ -14,6 +16,16 @@ class DetalhesScreen extends StatefulWidget {
 }
 
 class _DetalhesScreenState extends State<DetalhesScreen> {
+  // Função para abrir a localização no mapa com latitude e longitude
+  Future<void> _launchMap(double latitude, double longitude) async {
+    final Uri uri = Uri.parse('https://www.google.com/maps/search/?api=1&query=$latitude,$longitude');
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'nao foi possivel abrir o maps';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,30 +37,43 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
             Expanded(
               flex: 6,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MuseusExp(),
+                      settings: RouteSettings(
+                        arguments: widget.museu.expos, // exposições específicas de cada museu
+                      ),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kprimaryColor,
                   foregroundColor: Colors.white,
                 ),
-                child: const Text('btnComprar'),
+                child: const Text('Exposições'),
               ),
             ),
-            const SizedBox(width: 10,),
+            const SizedBox(width: 10),
             Expanded(
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _launchMap(widget.museu.latitude, widget.museu.longitude); 
+                },
                 style: IconButton.styleFrom(
                   shape: CircleBorder(
                     side: BorderSide(
                       color: Colors.grey.shade300,
                       width: 2,
                     ),
-                  )
+                  ),
                 ),
                 icon: const Icon(
-                  Iconsax.heart,
-                  color:  Colors.black ,
-                  size: 20,),
+                  Iconsax.location, 
+                  color: Colors.black,
+                  size: 20,
+                ),
               ),
             ),
           ],
@@ -79,23 +104,25 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                       IconButton(
                         onPressed: () => Navigator.pop(context),
                         style: IconButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            fixedSize: const Size(50, 50)),
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          fixedSize: const Size(50, 50),
+                        ),
                         icon: const Icon(CupertinoIcons.chevron_back),
                       ),
                       const Spacer(),
                       IconButton(
                         onPressed: () {},
                         style: IconButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            fixedSize: const Size(50, 50)),
-                        icon: const Icon(Iconsax.notification),
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          fixedSize: const Size(50, 50),
+                        ),
+                        icon: const Icon(Iconsax.ticket),
                       ),
                     ],
                   ),
@@ -118,7 +145,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: Container(
                 width: 50,
@@ -128,8 +155,8 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-            ),  
-            SizedBox(height: 10),      
+            ),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
@@ -142,9 +169,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       const Icon(
@@ -152,9 +177,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                         size: 18,
                         color: Colors.grey,
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
+                      const SizedBox(width: 5),
                       Text(
                         widget.museu.data,
                         style: const TextStyle(
@@ -162,17 +185,13 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                           color: Colors.grey,
                         ),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       const Icon(
                         Iconsax.clock,
                         size: 18,
                         color: Colors.grey,
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
+                      const SizedBox(width: 5),
                       Text(
                         widget.museu.horario,
                         style: const TextStyle(
@@ -180,12 +199,9 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                           color: Colors.grey,
                         ),
                       ),
-                     
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
                   Text(
                     widget.museu.descri,
                     textAlign: TextAlign.justify,
@@ -193,11 +209,9 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                       fontSize: 15,
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  const SizedBox(height: 15),
                   Text(
-                    widget.museu.local,
+                    widget.museu.adicional,
                     textAlign: TextAlign.justify,
                     style: const TextStyle(
                       fontSize: 15,
@@ -205,7 +219,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

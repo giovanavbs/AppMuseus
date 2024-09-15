@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:museus/models/museus.dart';
 import 'package:museus/telas/all_museu_screen.dart';
 import 'package:museus/telas/detalhes_museu.dart';
+import 'package:url_launcher/url_launcher.dart'; 
 
 class MuseuList extends StatefulWidget {
   const MuseuList({Key? key}) : super(key: key);
@@ -12,7 +13,14 @@ class MuseuList extends StatefulWidget {
 }
 
 class _MuseuListState extends State<MuseuList> {
-  final List<Museu> _listaFavoritos = [];
+
+  Future<void> _launchMapsUrl(double latitude, double longitude) async {
+    final String googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
+    final Uri url = Uri.parse(googleMapsUrl);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +31,7 @@ class _MuseuListState extends State<MuseuList> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
-              'eventossp',
+              'MuseusSP',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -45,21 +53,6 @@ class _MuseuListState extends State<MuseuList> {
                     ),
                   ),
                 ),
-                // IconButton(
-                //   icon: const Icon(Iconsax.heart),
-                //   onPressed: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => FavoritosScreen(
-                //           listaFavoritos: _listaFavoritos,
-                //         ),
-                //       ),
-                //     ).then((_) { 
-                //       setState(() {});
-                //     });
-                //   },
-                // ), ignorem, tentativas e tentativas
               ],
             ),
           ],
@@ -130,24 +123,16 @@ class _MuseuListState extends State<MuseuList> {
                         right: 1,
                         child: IconButton(
                           onPressed: () {
-                            setState(() {
-                              if (_listaFavoritos.contains(museu[index])) {
-                                _listaFavoritos.remove(museu[index]);
-                              } else {
-                                _listaFavoritos.add(museu[index]);
-                              }
-                            });
+                            _launchMapsUrl(museu[index].latitude, museu[index].longitude);
                           },
                           iconSize: 20,
                           style: IconButton.styleFrom(
                             backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius: BorderRadius.circular(20),
                             ),
                           ),
-                          icon: _listaFavoritos.contains(museu[index])
-                              ? const Icon(Iconsax.heart5, color: Colors.red)
-                              : const Icon(Iconsax.heart),
+                          icon: const Icon(Iconsax.location),
                         ),
                       ),
                     ],

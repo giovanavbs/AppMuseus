@@ -13,6 +13,7 @@ dependencies:
   line_awesome_flutter: ^3.0.1
   smooth_page_indicator: ^1.0.0
   iconsax: ^0.0.8
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +22,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - 'assets/images/logo.png'
-    - 'assets/images/perfil.png'
+    - 'images/'
+    - 'images/masp.jpg'
 

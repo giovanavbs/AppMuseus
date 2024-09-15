@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:museus/telas/main_screen.dart';
 import 'package:museus/widgets/constantes.dart';
+import 'package:museus/widgets/introTelas.dart';
 // import 'package:museus/widgets/introTelas.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kbackgroundColor,
         useMaterial3: true,
       ),
-      home: MainScreen(),   
+      home: IntroScreen(),   
     );
   }
 }

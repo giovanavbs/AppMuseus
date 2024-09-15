@@ -152,6 +152,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{E406BBBC-3D4C-3861-8156-A48CCE97CD0B}</Project>
       <Name>museu_gigi</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\giova\Desktop\flutterapp\build\windows\x64\plugins\url_launcher_windows\url_launcher_windows_plugin.vcxproj">
+      <Project>{F350463C-CAE8-3A2D-9F1C-8CEC6A6ABDEC}</Project>
+      <Name>url_launcher_windows_plugin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

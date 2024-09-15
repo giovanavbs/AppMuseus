@@ -14,7 +14,7 @@ class HomeAppBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Olá morte',//(to com preguiça e muitoooo sono:( resolvo essa bomba outra hora))
+            'Olá, Pessoa',
             style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,

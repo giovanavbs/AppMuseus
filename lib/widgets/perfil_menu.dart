@@ -20,7 +20,7 @@ class PerfilMenu extends StatelessWidget {
         ),
       ),
       title: const Text(
-        "Config",
+        "infos",
         style: TextStyle(fontSize: 15),
       ),
       trailing: Container(

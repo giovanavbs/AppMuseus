@@ -4,6 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:museus/models/museus.dart';
 import 'package:museus/telas/main_screen.dart';
 import 'package:museus/widgets/museu_all_card.dart';
+
 class MuseuListScreen extends StatelessWidget {
   const MuseuListScreen({super.key});
 
@@ -67,7 +68,7 @@ class MuseuListScreen extends StatelessWidget {
                     ),
                     fixedSize: const Size(50, 50),
                   ),
-                  icon: const Icon(Iconsax.notification),
+                  icon: const Icon(Iconsax.ticket),
                 ),
               ],
             ),

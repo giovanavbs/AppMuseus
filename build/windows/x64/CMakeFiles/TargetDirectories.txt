@@ -8,3 +8,6 @@ C:/Users/giova/Desktop/flutterapp/build/windows/x64/flutter/CMakeFiles/INSTALL.d
 C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/CMakeFiles/museu_gigi.dir
 C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/CMakeFiles/INSTALL.dir
 C:/Users/giova/Desktop/flutterapp/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/url_launcher_windows_plugin.dir
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/INSTALL.dir
+C:/Users/giova/Desktop/flutterapp/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/ALL_BUILD.dir

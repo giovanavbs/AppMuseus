@@ -40,7 +40,7 @@ class AllEventosScreenAppBar extends StatelessWidget {
             ),
           ),
           color:Colors.black,
-          icon: const Icon(Iconsax.notification),
+          icon: const Icon(Iconsax.ticket),
         ),
       ],
     );
