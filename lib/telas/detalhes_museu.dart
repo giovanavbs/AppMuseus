@@ -114,7 +114,14 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                       ),
                       const Spacer(),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          final Uri url = Uri.parse(widget.museu.linkSite);
+                          if (await canLaunchUrl(url)) {
+                            await launchUrl(url);
+                          } else {
+                            throw 'nao foi possivel acessar o site do museu';
+                          }
+                        },
                         style: IconButton.styleFrom(
                           backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -210,13 +217,6 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  Text(
-                    widget.museu.adicional,
-                    textAlign: TextAlign.justify,
-                    style: const TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
                 ],
               ),
             ),

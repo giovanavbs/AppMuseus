@@ -102,7 +102,7 @@ class PerfilScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "${usuario.usuario}@gmail.com", // Usando o e-mail do modelo
+                      "${usuario.usuario}@gmail.com", 
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.grey[600],

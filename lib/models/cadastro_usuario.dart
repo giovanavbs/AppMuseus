@@ -5,7 +5,7 @@ class UsuariosCadastrados {
     DadosLogin(
       nome: 'admin', 
       usuario: 'adm', 
-      senha: '1'),
+      senha: '1'), // usuario exemplo pra n ficar cadastrando
   ];
 
   static DadosLogin? validarUsuario(String usuario, String senha) {

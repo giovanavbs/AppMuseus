@@ -10,16 +10,16 @@ class IntroPage2 extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/masp.jpg"), 
+            image: AssetImage("images/museu2.jpg"), 
             fit: BoxFit.cover,
           ),
         ),
-        child: Align(
+        child: const Align(
           alignment: FractionalOffset(0.5, 0.8), // valor 1 horixontal, valor 2 vertical
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(10.0),
             child: Text(
-              'Pg 2',
+              'de São Paulo...',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
