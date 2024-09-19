@@ -5,13 +5,25 @@ class IntroPage1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor:  Colors.purple,
-      body:  Center(
-        child: Text(
-          'Pg 1',
-          style: TextStyle(
-            color: Colors.white, 
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/museu1.jpg"), 
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: const Align(
+          alignment: FractionalOffset(0.5, 0.8), // valor 1 horixontal, valor 2 vertical
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Text(
+              'Conheça os melhores MUSEUS...',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
           ),
         ),
       ),

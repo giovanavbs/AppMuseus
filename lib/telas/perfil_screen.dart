@@ -5,7 +5,6 @@ import 'package:museus/telas/expo-list-screen.dart';
 import 'package:museus/telas/favoritos_screen.dart';
 import 'package:museus/widgets/perfil_menu.dart';
 import 'package:museus/models/expo.dart';
-import 'package:museus/models/dados_login.dart'; 
 import 'package:museus/models/servicos/salvar_login.dart'; 
 
 class PerfilScreen extends StatelessWidget {

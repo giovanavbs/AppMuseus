@@ -5,7 +5,6 @@ class Museu {
   String nome;
   String data;
   String descri;
-  String adicional;
   String urldireto; // se der merda com a latitude/longitude atributo pra passar o link direto
   String horario;
   double latitude;  
@@ -17,7 +16,6 @@ class Museu {
     required this.nome,
     required this.data,
     required this.descri,
-    required this.adicional,
     required this.urldireto,
     required this.horario,
     required this.latitude,   
@@ -30,11 +28,10 @@ final List<Museu> museu = [
   Museu(
     img: "images/masp.jpg",
     nome: "Masp",
-    data: "sábado, 17 de agosto 2024",
-    descri: "lugar pika",
-    adicional: "adicional: sp pai",
+    data: "Aberto de terça à domingo",
+    descri: "Museu de Arte de São Paulo Assis Chateaubriand é um centro cultural e museu de arte brasileiro fundado em 1947 pelo empresário e jornalista paraibano Assis Chateaubriand. Entre os anos de 1947 e 1990, o crítico e marchand italiano Pietro Bardi assumiu a direção do MASP a convite de Chateaubriand.",
     urldireto: "",
-    horario: "08:00 às 17:00",
+    horario: "10:00 às 18:00",
     latitude: -23.550520,   
     longitude: -46.633308,  
     expos: [
@@ -55,11 +52,10 @@ final List<Museu> museu = [
   Museu(
     img: "images/museucatavento.jpg",
     nome: "Museu Catavento",
-    data: "sábado, 17 de agosto 2024",
-    descri: "lugar pika",
-    adicional: "adicional: sp pai",
+    data: "Aberto de terça à domingo",
+    descri: 'O Museu Catavento é um museu interativo, inaugurado em 2009 com o propósito de se dedicar às ciências e sua divulgação e está localizado no Palácio das Indústrias, em São Paulo, Brasil. O espaço de 12.000 metros quadrados é dividido em 4 seções: "Universo", "Vida", "Engenho" e "Sociedade" e conta com mais de 250 instalações. Voltado ao público jovem, foi fundado pelas secretarias estaduais de cultura e educação, com um investimento de 20 milhões de reais após 14 meses de construção.',
     urldireto: "",
-    horario: "08:00 às 17:00",
+    horario: "09:00 às 16:00",
     latitude: -23.550520,   
     longitude: -46.633308,  
     expos: [
@@ -80,11 +76,10 @@ final List<Museu> museu = [
   Museu(
     img: "images/museufavelas.jpg",
     nome: "Museu das Favelas",
-    data: "sábado, 17 de agosto 2024",
-    descri: "lugar pika",
-    adicional: "adicional: sp pai",
+    data: "Aberto de terça à domingo",
+    descri: "O Museu das Favelas é um equipamento da Secretaria da Cultura, Economia e Indústria Criativas do Estado de São Paulo, com sede em São Paulo, e gerido pela organização social de cultura IDG – Instituto de Desenvolvimento e Gestão. O Museu é um ambiente de pesquisa, preservação, produção e comunicação das memórias e potências criativas das favelas brasileiras. Com entrada gratuita e aberto a todos os públicos, propõe uma viva programação cultural e educativa, exposições, Centro de Referência e Biblioteca.",
     urldireto: "",
-    horario: "08:00 às 17:00",
+    horario: "10:00 às 17:00",
     latitude: -23.550520,   
     longitude: -46.633308,  
     expos: [
@@ -105,11 +100,10 @@ final List<Museu> museu = [
   Museu(
     img: "images/MAB.jpeg",
     nome: "MAB",
-    data: "sábado, 17 de agosto 2024",
-    descri: "lugar pika",
-    adicional: "adicional: sp pai",
+    data: "Aberto de quarta à sexta e aos domingos",
+    descri: "O Museu de Arqueologia Bíblica do Centro Universitário Adventista de São Paulo (MAB UNASP) é um equipamento cultural museológico sem fins lucrativos, comunitário, filantrópico e confessional. O MAB insere-se no contexto dos museus universitários, desenvolvendo atividades ligadas ao ensino, pesquisa e extensão, a partir das ciências ligadas à tipologia do acervo do museu: arqueologia, teologia, história, museologia, arte.",
     urldireto: "",
-    horario: "08:00 às 17:00",
+    horario: "09:00 às 17:00",
     latitude: -23.550520,   
     longitude: -46.633308,   
     expos: [
