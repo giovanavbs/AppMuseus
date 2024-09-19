@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:museus/telas/main_screen.dart';
 import 'package:museus/widgets/constantes.dart';
 import 'package:museus/widgets/introTelas.dart';
 // import 'package:museus/widgets/introTelas.dart';

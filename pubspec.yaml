@@ -24,4 +24,7 @@ flutter:
   assets:
     - 'images/'
     - 'images/masp.jpg'
+    - 'images/museu1.jpg'
+    - 'images/museu2.jpg'
+    - 'images/museu3.jpg'
 

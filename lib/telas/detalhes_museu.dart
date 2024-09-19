@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:museus/models/museus.dart';
-import 'package:museus/models/expo.dart';
 import 'package:museus/widgets/constantes.dart';
 import 'package:museus/telas/expo-list-screen.dart';
 import 'package:url_launcher/url_launcher.dart';
