@@ -9,7 +9,7 @@ class IntroPage3 extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/museu3.jpg"), 
+            image: AssetImage("images/intro6.png"), 
             fit: BoxFit.cover,
           ),
         ),
